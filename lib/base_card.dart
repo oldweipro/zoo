@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 // 卡片基类
@@ -72,15 +71,6 @@ class BaseCardState extends State<BaseCard> {
 
   topMiniTitle() {
     return Container();
-  }
-
-  testGet() async {
-    Response response;
-    Dio dio = Dio();
-    // 请求参数也可以通过对象传递，上面的代码等同于：
-    response =
-        await dio.get('http://wthrcdn.etouch.cn/weather_mini', queryParameters: {'city': '西安'});
-    print(response.data.toString());
   }
 
   @override
